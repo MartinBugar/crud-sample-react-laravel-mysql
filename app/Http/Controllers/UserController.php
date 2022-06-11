@@ -62,7 +62,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return response()->json(User::whereId($id)->first());
     }
 
     /**
@@ -70,21 +70,30 @@ class UserController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::whereId($id)->first();
+
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+        ]);
+
+        return response()->json('successs');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy($id)
     {
-        //
+        User::whereId($id)->first()->delete();
+
+        return response()->json('success');
     }
 }

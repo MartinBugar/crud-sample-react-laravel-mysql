@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import HomePage from './components/HomePage';
 import MyGallery from './components/MyGallery';
 import Create from './components/Create';
+import Edit from './components/Edit';
 
 import Navbar from './components/Navbar'
 
@@ -40,6 +41,7 @@ function App() {
                     </SimpleReactLightbox>
                 } />
                 <Route path="/create" exact element={<Create />} />
+                <Route path="/edit/:id" exact element={<Edit />} />
             </Routes >
         </Router>
     )

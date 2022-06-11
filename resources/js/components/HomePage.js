@@ -1,14 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 import "bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import 'bootstrap/dist/js/bootstrap.bundle.js';
-import 'bootstrap/dist/js/bootstrap.js';
-import 'bootstrap/dist/css/bootstrap.css';
-
 
 function HomePage() {
 
@@ -18,9 +14,17 @@ function HomePage() {
         fetchAllUsers();
     }, []);
 
+    //Get request
     const fetchAllUsers = () => {
         axios.get('http://localhost:8000/api/users').then(res => {
             setUsers(res.data);
+        })
+    }
+
+    //Delete request
+    const deleteUser = (id) => {
+        axios.delete('http://localhost:8000/api/users/' + id).then(res => {
+            fetchAllUsers();
         })
     }
 
@@ -41,7 +45,13 @@ function HomePage() {
                     <td>{index}</td>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
-                    <td>edit</td>
+                    <td>
+                        <Link className={"btn btn-info"} to={{pathname: "/edit/" + user.id}}>Edit</Link>
+                        <button type={"button"} className={"btn btn-danger"} onClick={() => {
+                            deleteUser(user.id)
+                        }}>Delete
+                        </button>
+                    </td>
                 </tr>
             ))}
             </tbody>
