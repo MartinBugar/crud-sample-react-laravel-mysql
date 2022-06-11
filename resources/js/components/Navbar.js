@@ -11,7 +11,7 @@ export default function Navbar() {
     return (
         <>
             <nav className="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark">
-                <Link to='/' class="navbar-brand">mbGallery</Link>
+                <Link to='/' class="navbar-brand">CRUD</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -23,24 +23,22 @@ export default function Navbar() {
 
                         <li className="aa nav-item mr-5">
                             <Link to='/' className="nav-link">
-                                Domov
-                                <span className="sr-only">
-                  (current)
-                </span>
-                            </Link>
-                        </li>
-
-                        <li className="nav-item mr-5">
-                            <Link to='/mygallery' className="nav-link">
-                                myGallery
+                                getAllUsers
                             </Link>
                         </li>
 
                         <li className="nav-item mr-5">
                             <Link to='/create' className="nav-link">
-                                create
+                                createNewUser
                             </Link>
                         </li>
+
+                        {/*<li className="nav-item mr-5">*/}
+                        {/*    <Link to='/mygallery' className="nav-link">*/}
+                        {/*        myGallery*/}
+                        {/*    </Link>*/}
+                        {/*</li>*/}
+
 
                         {/*<li className="nav-item mr-5">*/}
                         {/*    <Link to='/smery' className="nav-link">*/}
@@ -52,11 +50,6 @@ export default function Navbar() {
                         {/*    <Link to='/contact' className="nav-link" href="#">Kontakt</Link>*/}
                         {/*</li>*/}
                     </ul>
-
-                    <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
 
                 </div>
             </nav>

@@ -6,7 +6,7 @@ import "bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function HomePage() {
+function Home() {
 
     const [users, setUsers] = useState([]);
 
@@ -32,7 +32,7 @@ function HomePage() {
         <table className={"table"}>
             <thead>
             <tr>
-                <th>Sno.</th>
+                <th>Number</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Action</th>
@@ -59,4 +59,4 @@ function HomePage() {
     </div>);
 }
 
-export default HomePage;
+export default Home;

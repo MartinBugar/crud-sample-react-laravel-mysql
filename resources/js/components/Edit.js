@@ -34,10 +34,6 @@ function Edit(props) {
         setEnteredEmail(event.target.value);
     };
 
-    const passwordChangeHandler = (event) => {
-        setEnteredPassword(event.target.value);
-    };
-
     //POST REQUEST
     const submitForm = () => {
         axios.put(`http://localhost:8000/api/users/`+id, {
