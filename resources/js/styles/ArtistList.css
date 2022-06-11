@@ -1,0 +1,17 @@
+
+.maxWidth {
+margin: auto;
+margin-top: 5px;
+padding-left: 5px;
+padding-right: 5px;
+margin-bottom: 5px;
+max-width: 910px;
+}
+
+
+
+.tagy {
+    text-align: center;
+    padding: 5px 0px;
+    background-color: rgb(125, 125, 125);
+}

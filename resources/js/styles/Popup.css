@@ -1,0 +1,42 @@
+
+.popup {
+    border-radius: 12px;
+    top: 40vh;
+    margin-left: 40vw;
+    width: 18vw;
+    height: 9vh;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+
+ .close-btn {
+    border-radius: 12px;
+    background-color: red;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 40px;
+    height: 30px;
+}
+
+.text {
+    background: white;
+    margin-left: 10px;
+    margin-top: 15px;
+    justify-content: left;
+}
+
+.text h3 {
+    background-color: white;
+}
+
+.text p {
+    padding-top: 10px;
+    background-color: white;
+    position: flex;
+} 
+
+.close-btn strong {
+    background-color: red;
+}
