@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import http from "../http";
 
 import "bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -19,7 +18,7 @@ function HomePage() {
     }, []);
 
     const fetchAllUsers = () => {
-        http.get('/users').then(res => {
+        axios.get('http://localhost:8000/api/users').then(res => {
             setUsers(res.data);
         })
     }
